@@ -1,0 +1,11 @@
+name: Disenchant
+version: 1.0
+main: com.zareoncraft.disenchant.Disenchant
+commands:
+  disenchant:
+    description: Remove a item enchantment.
+    usage: /disenchant
+
+permissions:
+  Disenchant.disenchant:
+    description: Permite desencantar itens.

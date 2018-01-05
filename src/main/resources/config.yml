@@ -1,0 +1,4 @@
+#Formula: CustoXP = base + (nívelEncantamento * multiplicador)
+#Apenas números inteiros
+base: 5
+multiplicador: 2
