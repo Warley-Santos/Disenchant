@@ -24,16 +24,14 @@ public class DisenchantItem {
 			enchants = itemMeta.getEnchants();
 			if (enchants.size() >= 1) {
 				xpCost = calcXpCost(enchants, itemMeta);
-//				player.sendMessage("Valor de XP " + xpCost);
 				if (player.getLevel() >= xpCost) {
 					for (Enchantment ench : enchants.keySet()) {
-//						player.sendMessage(ChatColor.AQUA + "removido " + ench.getName() + " Level " + itemMeta.getEnchantLevel(ench));
 						itemStack.removeEnchantment(ench);
 					}
 					debitaXp(player, xpCost);
 					player.sendMessage(ChatColor.GREEN + "Removido " + enchants.size() + " encantamento(s).");
 				} else {
-					player.sendMessage(ChatColor.GREEN + "Você não possui xp sufuciente. É necessário " + xpCost + " niveis.");
+					player.sendMessage(ChatColor.GREEN + "Você não possui xp sufuciente. É necessário " + xpCost + " níveis.");
 				}
 			} else {
 				player.sendMessage(ChatColor.GREEN + "Este item não possui encantamentos.");
